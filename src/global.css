@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    height: 100%;
+}
+
+#__next{
+    height: 100%;
+}
+
+svg{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    padding: 8px;
+}
