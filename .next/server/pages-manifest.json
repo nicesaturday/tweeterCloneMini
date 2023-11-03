@@ -1,0 +1,10 @@
+{
+  "/_middleware": "pages/_middleware.js",
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/log-in": "pages/log-in.js",
+  "/api/tweet/[id]": "pages/api/tweet/[id].js",
+  "/api/tweet/like/[id]": "pages/api/tweet/like/[id].js",
+  "/tweet/[id]": "pages/tweet/[id].js"
+}

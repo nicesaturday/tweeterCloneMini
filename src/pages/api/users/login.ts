@@ -20,6 +20,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       await req.session.save();
       res.status(200).json({ login: true });
     }
+
+    if (!user) {
+      res.status(200).json({ login: false });
+    }
   }
 }
 

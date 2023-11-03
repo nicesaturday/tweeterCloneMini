@@ -15,6 +15,7 @@ model User {
   name  String  @unique
   email String  @unique
   tweet Tweet[]
+  like  Like[]
 }
 
 model Tweet {
@@ -25,6 +26,20 @@ model Tweet {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId    Int
   isLike    Boolean
+  like  Like[]
 
+  @@index([userId])
+}
+
+model Like {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tweet     Tweet    @relation(fields: [tweetId], references: [id], onDelete: Cascade)
+  tweetId   Int
+  userId    Int
+
+  @@index([tweetId])
   @@index([userId])
 }
